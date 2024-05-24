@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BatteryInfo.qml</file>
+        <file>ComDialog.qml</file>
+        <file>ComParam.qml</file>
+        <file>Correct.qml</file>
+        <file>CorrectButton.qml</file>
+        <file>DataInfo.qml</file>
+        <file>HMIButton.qml</file>
+        <file>LoginWin.qml</file>
+        <file>LogPage.qml</file>
+        <file>MyButton.qml</file>
+        <file>MyText.qml</file>
+        <file>MyTumbler.qml</file>
+        <file>No192.qml</file>
+        <file>OtherInfoPage.qml</file>
+        <file>ParamConfig.qml</file>
+        <file>ParamConfigCombo.qml</file>
+        <file>ParamConfigInput.qml</file>
+        <file>PowerProgress.qml</file>
+        <file>RomPage.qml</file>
+        <file>RxTime.qml</file>
+        <file>RxTimeRecord.qml</file>
+        <file>ScanAndRecordTimeBlock.qml</file>
+        <file>ScanBlock.qml</file>
+        <file>SelectTime.qml</file>
+        <file>SerialParam.qml</file>
+        <file>TipsWin.qml</file>
+    </qresource>
+</RCC>
