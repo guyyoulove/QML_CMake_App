@@ -15,7 +15,12 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SerialPort)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SerialPort)
 
 
-file(GLOB_RECURSE PROJECT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+file(GLOB PROJECT_SOURCES 
+${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp 
+${CMAKE_CURRENT_SOURCE_DIR}/xlsx_src/*.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/*.qrc)
+
+file(GLOB_RECURSE PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(BMS
@@ -35,9 +40,7 @@ else()
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(BMS
-          ${PROJECT_SOURCES}
-          qml.qrc
-          image.qrc)
+          ${PROJECT_SOURCES} ${PROJECT_HEADERS})
 
     endif()
 endif()
@@ -62,7 +65,7 @@ set_target_properties(BMS PROPERTIES
 )
 
 include(GNUInstallDirs)
-include_directories(${Qt${QT_VERSION_MAJOR}Quick_PRIVATE_INCLUDE_DIRS} "./xlsx_src")
+include_directories(${Qt${QT_VERSION_MAJOR}Quick_PRIVATE_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/xlsx_src ${CMAKE_CURRENT_SOURCE_DIR}/include)
 install(TARGETS BMS
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
