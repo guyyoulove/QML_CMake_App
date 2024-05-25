@@ -14,10 +14,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SerialPort)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SerialPort)
 
-set(PROJECT_SOURCES
-        main.cpp
-        qml.qrc
-)
+
+file(GLOB_RECURSE PROJECT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(BMS
@@ -38,17 +36,13 @@ else()
     else()
         add_executable(BMS
           ${PROJECT_SOURCES}
-          batteryinfo.h batteryinfo.cpp
-          batteryinfo.h baudinfo.h bms.h comthread.h login.h loginfomodel.h md5.h otherinfomodel.h serialportinfo.h tempinfo.h
-          batteryinfo.cpp baudinfo.cpp bms.cpp comthread.cpp login.cpp loginfomodel.cpp main.cpp md5.cpp otherinfomodel.cpp serialportinfo.cpp tempinfo.cpp
-          image.qrc
-          xlsx_src/xlsxabstractooxmlfile.cpp xlsx_src/xlsxabstractsheet.cpp xlsx_src/xlsxcell.cpp xlsx_src/xlsxcellformula.cpp xlsx_src/xlsxcelllocation.cpp xlsx_src/xlsxcellrange.cpp xlsx_src/xlsxcellreference.cpp xlsx_src/xlsxchart.cpp xlsx_src/xlsxchartsheet.cpp xlsx_src/xlsxcolor.cpp xlsx_src/xlsxconditionalformatting.cpp xlsx_src/xlsxcontenttypes.cpp xlsx_src/xlsxdatavalidation.cpp xlsx_src/xlsxdatetype.cpp xlsx_src/xlsxdocpropsapp.cpp xlsx_src/xlsxdocpropscore.cpp xlsx_src/xlsxdocument.cpp xlsx_src/xlsxdrawing.cpp xlsx_src/xlsxdrawinganchor.cpp xlsx_src/xlsxformat.cpp xlsx_src/xlsxmediafile.cpp xlsx_src/xlsxnumformatparser.cpp xlsx_src/xlsxrelationships.cpp xlsx_src/xlsxrichstring.cpp xlsx_src/xlsxsharedstrings.cpp xlsx_src/xlsxsimpleooxmlfile.cpp xlsx_src/xlsxstyles.cpp xlsx_src/xlsxtheme.cpp xlsx_src/xlsxutility.cpp xlsx_src/xlsxworkbook.cpp xlsx_src/xlsxworksheet.cpp xlsx_src/xlsxzipreader.cpp xlsx_src/xlsxzipwriter.cpp
-        )
+          qml.qrc
+          image.qrc)
+
     endif()
 endif()
 
-target_link_libraries(BMS
-  PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick)
+target_link_libraries(BMS PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick)
 target_link_libraries(BMS PRIVATE Qt${QT_VERSION_MAJOR}::SerialPort)
 #target_link_libraries(BMS PRIVATE Qt${QT_VERSION_MAJOR}::QZipReader)
 #target_link_libraries(BMS PRIVATE Qt${QT_VERSION_MAJOR}::QZipWriter)
@@ -77,3 +71,6 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_import_qml_plugins(BMS)
     qt_finalize_executable(BMS)
 endif()
+
+#set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}../../build)
+#set(RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}../../out)
