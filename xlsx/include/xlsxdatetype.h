@@ -15,7 +15,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class DateType
+class XLSX_EXPORT DateType
 {
 public:
     DateType();

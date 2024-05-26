@@ -42,7 +42,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class Theme : public AbstractOOXmlFile
+class XLSX_EXPORT Theme : public AbstractOOXmlFile
 {
 public:
     Theme(CreateFlag flag);

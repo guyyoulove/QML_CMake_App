@@ -32,7 +32,7 @@ struct XlsxDefineNameData
     int sheetId;
 };
 
-class WorkbookPrivate : public AbstractOOXmlFilePrivate
+class XLSX_EXPORT WorkbookPrivate : public AbstractOOXmlFilePrivate
 {
     Q_DECLARE_PUBLIC(Workbook)
 public:

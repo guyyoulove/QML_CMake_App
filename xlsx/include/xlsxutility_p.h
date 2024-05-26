@@ -52,7 +52,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class CellReference;
+class XLSX_EXPORT CellReference;
 
 bool parseXsdBoolean(const QString &value, bool defaultValue=false);
 

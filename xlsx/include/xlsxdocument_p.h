@@ -33,7 +33,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class DocumentPrivate
+class XLSX_EXPORT DocumentPrivate
 {
     Q_DECLARE_PUBLIC(Document)
 public:

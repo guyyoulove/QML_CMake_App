@@ -49,7 +49,7 @@ class Chartsheet;
 class Worksheet;
 
 class WorkbookPrivate;
-class Workbook : public AbstractOOXmlFile
+class XLSX_EXPORT Workbook : public AbstractOOXmlFile
 {
     Q_DECLARE_PRIVATE(Workbook)
 public:

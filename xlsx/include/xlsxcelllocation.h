@@ -17,7 +17,7 @@ QT_BEGIN_NAMESPACE_XLSX
 
 class Cell;
 
-class CellLocation
+class XLSX_EXPORT CellLocation
 {
 public:
     CellLocation();

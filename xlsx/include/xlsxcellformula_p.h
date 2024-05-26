@@ -12,7 +12,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class CellFormulaPrivate : public QSharedData
+class XLSX_EXPORT CellFormulaPrivate : public QSharedData
 {
 public:
     CellFormulaPrivate(const QString &formula, const CellRange &reference, CellFormula::FormulaType type);

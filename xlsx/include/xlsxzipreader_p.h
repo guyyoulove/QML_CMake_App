@@ -51,7 +51,7 @@ class QZipReader;
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class  ZipReader
+class XLSX_EXPORT ZipReader
 {
 public:
     explicit ZipReader(const QString &fileName);

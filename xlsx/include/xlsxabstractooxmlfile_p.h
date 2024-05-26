@@ -10,7 +10,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class AbstractOOXmlFilePrivate
+class XLSX_EXPORT AbstractOOXmlFilePrivate
 {
     Q_DECLARE_PUBLIC(AbstractOOXmlFile)
 

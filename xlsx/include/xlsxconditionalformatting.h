@@ -23,7 +23,7 @@ class Worksheet;
 class Styles;
 class ConditionalFormattingPrivate;
 
-class ConditionalFormatting
+class XLSX_EXPORT ConditionalFormatting
 {
 public:
     enum HighlightRuleType {

@@ -12,7 +12,7 @@
 QT_BEGIN_NAMESPACE_XLSX
 
 // dev57
-class CellRange
+class XLSX_EXPORT CellRange
 {
 public:
     CellRange();

@@ -42,7 +42,7 @@ class MediaFile;
 class Chart;
 
 //Helper class
-struct XlsxMarker
+struct XLSX_EXPORT XlsxMarker
 {
     XlsxMarker(){}
     XlsxMarker(int row, int column, int rowOffset, int colOffset)

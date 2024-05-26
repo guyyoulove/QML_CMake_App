@@ -46,7 +46,7 @@ class SharedStrings;
 
 class FormatPrivate;
 
-class Format
+class XLSX_EXPORT Format
 {
 public:
     enum FontScript

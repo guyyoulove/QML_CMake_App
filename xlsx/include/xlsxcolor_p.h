@@ -49,7 +49,7 @@ QT_BEGIN_NAMESPACE_XLSX
 
 class Styles;
 
-class XlsxColor
+class XLSX_EXPORT XlsxColor
 {
 public:
     explicit XlsxColor(const QColor &color = QColor());

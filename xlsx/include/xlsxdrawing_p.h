@@ -55,7 +55,7 @@ class Workbook;
 class AbstractSheet;
 class MediaFile;
 
-class Drawing : public AbstractOOXmlFile
+class XLSX_EXPORT Drawing : public AbstractOOXmlFile
 {
 public:
     Drawing(AbstractSheet *sheet, CreateFlag flag);

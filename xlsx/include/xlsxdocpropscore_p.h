@@ -42,7 +42,7 @@
 #include <QMap>
 #include <QStringList>
 
-class QIODevice;
+class XLSX_EXPORT QIODevice;
 
 QT_BEGIN_NAMESPACE_XLSX
 

@@ -13,7 +13,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class ContentTypes : public AbstractOOXmlFile
+class XLSX_EXPORT ContentTypes : public AbstractOOXmlFile
 {
 public:
     ContentTypes(CreateFlag flag);

@@ -42,7 +42,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class ChartsheetPrivate : public AbstractSheetPrivate
+class XLSX_EXPORT ChartsheetPrivate : public AbstractSheetPrivate
 {
     Q_DECLARE_PUBLIC(Chartsheet)
 public:

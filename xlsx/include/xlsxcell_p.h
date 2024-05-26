@@ -16,7 +16,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class CellPrivate
+class XLSX_EXPORT CellPrivate
 {
     Q_DECLARE_PUBLIC(Cell)
 public:

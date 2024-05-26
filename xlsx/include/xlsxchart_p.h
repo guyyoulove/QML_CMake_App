@@ -18,7 +18,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class XlsxSeries
+class XLSX_EXPORT XlsxSeries
 {
 public:
     //At present, we care about number cell ranges only!

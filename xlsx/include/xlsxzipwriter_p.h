@@ -41,7 +41,7 @@
 
 #include "xlsxglobal.h"
 
-class QZipWriter;
+class XLSX_EXPORT QZipWriter;
 
 QT_BEGIN_NAMESPACE_XLSX
 

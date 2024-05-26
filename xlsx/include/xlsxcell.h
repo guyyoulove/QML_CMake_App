@@ -24,7 +24,7 @@ class CellFormula;
 class CellPrivate;
 class WorksheetPrivate;
 
-class Cell
+class XLSX_EXPORT Cell
 {
 	Q_DECLARE_PRIVATE(Cell)
 

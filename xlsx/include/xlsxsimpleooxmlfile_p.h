@@ -42,7 +42,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class SimpleOOXmlFile : public AbstractOOXmlFile
+class XLSX_EXPORT SimpleOOXmlFile : public AbstractOOXmlFile
 {
 public:
     SimpleOOXmlFile(CreateFlag flag);

@@ -49,7 +49,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class XlsxSharedStringInfo
+class XLSX_EXPORT XlsxSharedStringInfo
 {
 public:
     XlsxSharedStringInfo(int index=0, int count = 1) :

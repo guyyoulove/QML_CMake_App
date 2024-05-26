@@ -46,7 +46,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class XlsxCfVoData
+class XLSX_EXPORT XlsxCfVoData
 {
 public:
     XlsxCfVoData()

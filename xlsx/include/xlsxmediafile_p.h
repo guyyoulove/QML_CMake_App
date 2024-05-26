@@ -45,7 +45,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class MediaFile
+class XLSX_EXPORT MediaFile
 {
 public:
     MediaFile(const QString &fileName);

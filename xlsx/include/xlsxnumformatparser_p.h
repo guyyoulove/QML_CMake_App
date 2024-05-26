@@ -40,7 +40,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class NumFormatParser
+class XLSX_EXPORT NumFormatParser
 {
 public:
     static bool isDateTime(const QString &formatCode);

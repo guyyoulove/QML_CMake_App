@@ -40,7 +40,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class RichStringPrivate : public QSharedData
+class XLSX_EXPORT RichStringPrivate : public QSharedData
 {
 public:
     RichStringPrivate();

@@ -10,7 +10,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
-class FormatPrivate : public QSharedData
+class XLSX_EXPORT FormatPrivate : public QSharedData
 {
 public:
     enum FormatType
