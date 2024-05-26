@@ -12,16 +12,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 file(GLOB PROJECT_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui)
 
 add_library(xlsx SHARED
 ${PROJECT_SOURCES}
 ${PROJECT_HEADERS}
 )
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+#set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-target_link_libraries(xlsx PRIVATE Qt${QT_VERSION_MAJOR}::Core)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(xlsx PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui)
+#include(GNUInstallDirs)
+
+include_directories(${Qt${QT_VERSION_MAJOR}Gui_PRIVATE_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_definitions(xlsx PRIVATE XLSX_LIBRARY)
